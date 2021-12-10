@@ -1,1 +1,41 @@
-<h1>Posts</h1>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="res/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="res/js/jsIndex.js"></script>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<header>
+    <nav>
+        <a href="/">Home </a> |
+        <a href="/posts">Posts page</a> |
+        <a href="/contactus">Contact us</a>
+    </nav>
+</header>
+
+<section>
+    <div class="posts list">
+        <h2>All posts</h2>
+        <% posts.forEach(post => { %>
+            <h3 class="title">
+                <%= post.title %>
+            </h3>
+            <p class="body">
+                <%= post.body %>
+            </p>
+        <% }) %>
+    </div>
+</section>
+<footer>
+    <p><sup>&copy;</sup> NoteIt & PostIt</p>
+</footer>
+</body>
+
+</html>
