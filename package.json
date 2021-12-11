@@ -1,0 +1,26 @@
+{
+  "name": "wad-hw4-as",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greteh/WAD-HW4-AS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greteh/WAD-HW4-AS/issues"
+  },
+  "homepage": "https://github.com/greteh/WAD-HW4-AS#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  }
+}
