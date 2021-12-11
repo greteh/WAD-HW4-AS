@@ -1,0 +1,36 @@
+<!-- posts.ejs that should query the database and list all available posts within the posts.ejs page -->
+<!-- no posts: "you did not post anything" -->
+<!-- post: a title, a body, and a like button and the number of likes -->
+<!-- like button: likes += 1, enable = false -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Posts</title>
+</head>
+<body>
+<h1>Posts page</h1>
+<%- include('./partials/navbar.ejs') %>
+<div class="posts list">
+    <h2>All posts</h2>
+    <% if (posts.length > 0) { %>
+        <% posts.forEach(post => { %>
+            <a class="singlepost" href="/singlepost/<%= post.id %>">
+                <h3 class="title">
+                    <%= post.title %>
+                </h3>
+                <p class="body">
+                    <%= post.body %>
+                </p>
+            </a>
+        <% }) %>
+    <% } else { %>
+        <p>You did not post anything...</p>
+    <% } %>
+</div>
+<%- include('./partials/footer.ejs') %>
+</body>
+</html>
